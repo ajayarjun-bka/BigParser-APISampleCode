@@ -93,6 +93,7 @@ requestHeaders = {'content-type': 'application/json', 'authId': authId}
 # Making API call to get the headers of grid
 queryTableHeaderResponse = makeGetCall(queryTableHeaderURL, requestHeaders)
 print(queryTableHeaderResponse)
+# Fetching Header< END >
 
 # 2b.Getting the rows of the grid
 
@@ -107,3 +108,4 @@ queryTableURL = "https://www.bigparser.com/APIServices/api/query/table?startInde
 queryTableRequest = {"gridId": gridId, "rowCount": 50}
 queryTableResponse = makePostCall(queryTableURL, requestHeaders, queryTableRequest)
 print(queryTableResponse)
+# Fetching Data< END >
