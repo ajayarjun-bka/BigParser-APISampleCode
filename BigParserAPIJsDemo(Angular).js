@@ -2,7 +2,7 @@ angular.module('bigparser-api-demo', [])
   .controller('HomeController', function ($http) {
 
 
-    //Replace Username and Password with your credentials
+    //User login. Please Replace with your respective emailid and password below
     var loginURL = 'https://www.bigparser.com/APIServices/api/common/login';
     var loginRequestData = {
       'emailId': 'bigparser.api@gmail.com',
@@ -11,7 +11,9 @@ angular.module('bigparser-api-demo', [])
 
     //Function to fetch grid headers
     var getGridHeaders = function (authId, gridId) {
+      //setting the url for getting grid header
       var getGridURL = 'https://www.bigparser.com/APIServices/api/grid/headers?gridId=' + gridId;
+      //setting the API request headers
       var gridHeadersRequest = {
         method: 'GET',
         url: getGridURL,
@@ -32,7 +34,9 @@ angular.module('bigparser-api-demo', [])
 
     // function to fetch data from grid
     var getGridData = function (authId, gridId) {
+      //startIndex and endIndex are Optional. You can use them in case you need pagination.
       var queryTableURL = 'https://www.bigparser.com/APIServices/api/query/table?startIndex=0&endIndex=50';
+       //setting the API request headers and post parameters
       var gridDataRequest = {
         method: 'POST',
         url: queryTableURL,
@@ -45,8 +49,6 @@ angular.module('bigparser-api-demo', [])
           'rowCount': 50
         }
       }
-
-
       $http(gridDataRequest).then(function (response) {
         if (response.data) {
           console.log('Grid Data Response:');
@@ -58,7 +60,7 @@ angular.module('bigparser-api-demo', [])
 
 
 // HTTP post for login.
-
+    //specify the gridId you want to query
     $http.post(loginURL, loginRequestData).
       then(function (response) {
         if (response.data && response.data.authId) {
