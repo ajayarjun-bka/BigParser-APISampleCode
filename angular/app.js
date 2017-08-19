@@ -5,8 +5,8 @@ angular.module('bigparser-api-demo', [])
     //Replace Username and Password with your credentials
     var loginURL = 'https://www.bigparser.com/APIServices/api/common/login';
     var loginRequestData = {
-      'emailId': 'arjun.bka@gmail.com',
-      'password': 'AjayArjun'
+      'emailId': 'big@bigparser.com',
+      'password': 'bigparser'
     };
     var authId = undefined
     var gridId = "57a34b2de4b05fc193e80f32"
