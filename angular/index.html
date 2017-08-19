@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="bigparser-api-demo">
+
+<head>
+	<title>Hello BigParser</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+
+<body>
+	<div ng-controller="HomeController">
+		<button ng-click="login()">Login</button>
+		<button ng-click="getGridHeaders()">Get Headers</button>
+		<button ng-click="getGridData()">Get Data</button>
+		<br>
+		<br>
+		<br>
+		<!-- <div ng-show="loginResult"><p>{{loginResult}}</p></div>
+		<div ng-show="pls"><p>{{pls}}</p></div> -->
+
+		<div ng-show="result" style="overflow-y: scroll; height:400px; border: solid">
+			<p ng-repeat="name in result">{{name}}</p>
+		</div>
+
+	</div>
+</body>
+
+</html>
