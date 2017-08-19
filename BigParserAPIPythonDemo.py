@@ -69,7 +69,7 @@ def makeGetCall(uri, headers):
 
 
 loginUri = "https://www.bigparser.com/APIServices/api/common/login"
-loginRequest = {'emailId': 'arjun.bka@gmail.com', 'password': 'AjayArjun'}
+loginRequest = {'emailId': 'big@bigparser.com', 'password': 'bigparser'}
 loginHeaders = {'content-type': 'application/json'}
 
 # Making API call to get the authId
